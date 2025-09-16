@@ -38,7 +38,7 @@ python trauma_data_processor_simple.py
 
 ## Quick Start
 
-**One command to rule them all!** 🚀
+**One command to rule them all!** 
 
 ```bash
 python trauma_data_processor_simple.py
