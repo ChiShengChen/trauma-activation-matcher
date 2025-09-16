@@ -2,6 +2,8 @@
 
 A simple, all-in-one Python script that processes trauma activation data from Excel files and matches it with audio file data extracted by an LLM pipeline. Perfect for beginners - just run one command and get results!
 
+⚠️ **DISCLAIMER**: This project contains **synthetic/sample data only**. All patient data, audio files, and transcripts are **fictional** and created for demonstration purposes. No real medical data is included.
+
 ## Features
 
 - **Trauma Activation Filtering**: Filters registry data to include only trauma activations (ED_TTA_TYPE01 > 3)
@@ -53,36 +55,42 @@ That's it! The script will automatically:
 
 ## Sample Data Description
 
+⚠️ **IMPORTANT**: All data in this project is **synthetic/sample data** for demonstration purposes only.
+
 ### Excel Files (Registry Data)
 - **Location**: `data/xlsx_files/trauma_registry_sample.xlsx`
-- **Content**: 20 trauma activation records
+- **Content**: 20 **synthetic** trauma activation records
 - **Columns**: Patient ID, ED_TTA_TYPE01, Patient Arrival Date & Time, Sex, Age, Mechanism, Injuries, Chief Complaint
 - **Filtered**: Only includes records with ED_TTA_TYPE01 > 3 (18 records)
+- **Note**: All patient data is **fictional** and created for testing purposes
 
 ### Audio Files (Audio Data)
 - **Location**: `data/audio_files/`
-- **Content**: 20 audio files (2023-01-15 to 2023-01-16)
+- **Content**: 20 **synthetic** audio files (2023-01-15 to 2023-01-16)
 - **Format**: `.wav` files with timestamps in filenames
-- **JSON Data**: Each audio file has a corresponding `.json` file containing:
-  - Transcript text
-  - Age
-  - Sex
-  - Injury mechanism
-  - Injuries
-  - Activation page
+- **Audio Content**: **Generated tone files** (not real audio recordings)
+- **JSON Data**: Each audio file has a corresponding `.json` file containing **simulated** data:
+  - Transcript text (fictional)
+  - Age (synthetic)
+  - Sex (synthetic)
+  - Injury mechanism (fictional)
+  - Injuries (fictional)
+  - Activation page (simulated)
 
 ## Matching Results
 
-The script successfully matched all 18 trauma activation records:
+The script successfully matched all 18 **synthetic** trauma activation records:
 
-- **Total Records**: 18
+- **Total Records**: 18 (all synthetic)
 - **Records with Matches**: 18 (100%)
 - **Records without Matches**: 0
 - **Average Matches per Record**: 1.00
 
-### Matching Examples
+### Matching Examples (Synthetic Data)
 - **P001**: 25-year-old male, MVA, arrival time 14:25:30 → matched audio 14:30:25 (time diff 4.9 minutes, match score 0.883)
 - **P002**: 32-year-old female, fall from height, arrival time 15:10:45 → matched audio 15:15:30 (time diff 4.8 minutes, match score 0.886)
+
+**Note**: These are **fictional examples** using synthetic data for demonstration purposes.
 
 ## Usage
 
@@ -125,6 +133,8 @@ OUTPUT_FOLDER = "output"  # Output path
   }
   ```
 
+⚠️ **Note**: The sample data provided is **synthetic** and for demonstration only. Replace with your actual data for real processing.
+
 
 ## Matching Algorithm
 
@@ -162,12 +172,14 @@ You can modify the configuration at the top of `trauma_data_processor_simple.py`
 
 ## Scaling to Full Dataset
 
-When you're ready to process your full dataset:
+When you're ready to process your **actual** dataset (replace the synthetic data):
 
-1. Place your Excel files in `data/xlsx_files/`
-2. Place audio files and JSON data in `data/audio_files/`
-3. Adjust the `manual_sample_size` parameter
+1. Place your **real** Excel files in `data/xlsx_files/`
+2. Place **real** audio files and JSON data in `data/audio_files/`
+3. Adjust the `manual_sample_size` parameter if needed
 4. Run the complete processing pipeline
+
+⚠️ **Important**: Remove or replace the synthetic sample data before processing real data.
 
 ## File Structure
 
@@ -176,15 +188,15 @@ ems_matching/
 ├── trauma_data_processor_simple.py  # Main script (one file does it all!)
 ├── requirements.txt                 # Python dependencies
 ├── README.md                       # Complete documentation
-├── SIMPLE_USAGE.md                 # Simple usage guide
-├── PROJECT_OVERVIEW.md             # Project overview
-├── data/                           # Sample data
-│   ├── xlsx_files/                # Excel files with registry data
-│   └── audio_files/               # Audio files and extracted JSON data
+├── data/                           # Synthetic sample data
+│   ├── xlsx_files/                # Synthetic Excel files with registry data
+│   └── audio_files/               # Synthetic audio files and JSON data
 └── output/                         # Output files (auto-generated)
     ├── trauma_data_unified.xlsx    # Main results
     ├── trauma_data_unified.csv     # CSV version
     └── other output files...
 ```
+
+⚠️ **Note**: All data in the `data/` folder is **synthetic** and for demonstration purposes only.
 
 
