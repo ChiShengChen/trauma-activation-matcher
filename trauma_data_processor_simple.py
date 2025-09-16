@@ -561,23 +561,23 @@ def main():
     print()
     
     # Check dependencies
-    print("1. Checking dependencies...")
+    print("Checking dependencies...")
     if not check_dependencies():
         print("Please install missing packages and try again.")
         return
     print("✓ All dependencies are installed!")
     
     # Create sample data if needed
-    print("\n2. Checking for sample data...")
-    if not Path(XLSX_FOLDER).exists() or not list(Path(XLSX_FOLDER).glob("*.xlsx")):
-        print("Creating sample data...")
-        create_sample_data()
-        print("✓ Sample data created!")
-    else:
-        print("✓ Sample data already exists!")
+    # print("\n2. Checking for sample data...")
+    # if not Path(XLSX_FOLDER).exists() or not list(Path(XLSX_FOLDER).glob("*.xlsx")):
+    #     print("Creating sample data...")
+    #     create_sample_data()
+    #     print("✓ Sample data created!")
+    # else:
+    #     print("✓ Sample data already exists!")
     
     # Process data
-    print("\n3. Processing trauma data...")
+    print("Processing trauma data...")
     try:
         processor = TraumaDataProcessor()
         processor.run_full_pipeline()
@@ -587,7 +587,7 @@ def main():
         return
     
     # Show results
-    print("\n4. Showing results...")
+    print("Showing results...")
     view_results()
     
     print("\n" + "="*60)
