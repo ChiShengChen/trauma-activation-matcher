@@ -187,47 +187,4 @@ ems_matching/
     └── other output files...
 ```
 
-## Troubleshooting
 
-### Common Issues
-
-1. **No Excel files found**: Ensure xlsx_folder contains .xlsx or .xls files
-2. **No audio files found**: Ensure audio files have timestamps in filenames
-3. **Column not found errors**: Check that required columns exist in Excel files
-4. **Timestamp parsing errors**: Verify audio filenames contain recognizable timestamp patterns
-
-### Supported Timestamp Formats
-
-- `2023-01-15_14-30-25`
-- `20230115_143025`
-- `2023-01-15 14:30:25`
-- `01-15-2023_14-30-25`
-- `20230115_143025`
-
-## Manual Review Process
-
-1. Review the `manual_checking_sample.xlsx` file
-2. For each record, verify the best match and note any issues
-3. Update the `match_correct` and `confidence_score` columns
-4. Use feedback to adjust matching parameters if needed
-
-## Success! 🎉
-
-Your trauma data processing system is ready! This simple script demonstrates how to:
-- ✅ Filter trauma activation data automatically
-- ✅ Process audio files and extracted data
-- ✅ Use intelligent multi-criteria matching algorithms
-- ✅ Generate comprehensive unified data tables
-- ✅ Create samples for manual verification
-
-**Just run one command and you're done!**
-
-```bash
-python trauma_data_processor_simple.py
-```
-
-Perfect for beginners and experts alike! 🚀
-
-## Support
-
-For issues or questions, check the logging output for detailed error messages and processing information.
