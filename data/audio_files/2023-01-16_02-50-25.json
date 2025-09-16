@@ -1,0 +1,16 @@
+{
+  "transcript": "44-year-old male assault victim with head injury and facial trauma. Patient is conscious and alert. Head injury with possible concussion. Multiple facial lacerations and contusions. Blood pressure is 115/75. Heart rate is 95. Need trauma consult for assault head injury.",
+  "age": 44,
+  "sex": "M",
+  "mechanism": "Assault",
+  "injuries": "Head injury, facial trauma",
+  "activation_page": "Trauma consult for 44-year-old male assault victim with head injury and facial trauma. Patient conscious, stable vitals. Trauma team consultation required.",
+  "vitals": {
+    "blood_pressure": "115/75",
+    "heart_rate": 95,
+    "respiratory_rate": 16,
+    "oxygen_saturation": 98
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

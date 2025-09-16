@@ -1,0 +1,16 @@
+{
+  "transcript": "35-year-old female assault victim with head injury and neck trauma. Patient was strangled during assault. Head injury with possible concussion. Neck trauma with possible cervical spine injury. Patient is conscious but in severe pain. Blood pressure is 110/75. Heart rate is 95. Need trauma activation for assault neck injury.",
+  "age": 35,
+  "sex": "F",
+  "mechanism": "Assault",
+  "injuries": "Head injury, neck trauma",
+  "activation_page": "Trauma activation for 35-year-old female assault victim with head injury and neck trauma. Patient conscious, stable vitals. Possible cervical spine injury. Trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "110/75",
+    "heart_rate": 95,
+    "respiratory_rate": 16,
+    "oxygen_saturation": 98
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

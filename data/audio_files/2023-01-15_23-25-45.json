@@ -1,0 +1,16 @@
+{
+  "transcript": "33-year-old female high fall victim with spinal injury and head trauma. Patient fell from approximately 15 feet. Patient is unconscious and intubated. Blood pressure is 105/70. Heart rate is 115. Need immediate trauma activation for high fall with spinal injury.",
+  "age": 33,
+  "sex": "F",
+  "mechanism": "Fall from height",
+  "injuries": "Spinal injury, head trauma",
+  "activation_page": "STAT trauma activation for 33-year-old female high fall victim with spinal injury and head trauma. Patient unconscious, intubated. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "105/70",
+    "heart_rate": 115,
+    "respiratory_rate": 14,
+    "oxygen_saturation": 96
+  },
+  "consciousness": "Unconscious",
+  "airway": "Intubated"
+}

@@ -1,0 +1,16 @@
+{
+  "transcript": "22-year-old female assault victim with head injury and facial fractures. Patient is conscious and alert. Multiple facial fractures including orbital and mandibular fractures. Patient is stable but needs trauma activation for facial trauma.",
+  "age": 22,
+  "sex": "F",
+  "mechanism": "Assault",
+  "injuries": "Head injury, facial fractures",
+  "activation_page": "Trauma activation for 22-year-old female assault victim with head injury and facial fractures. Patient conscious, stable. Trauma team activation required for facial trauma management.",
+  "vitals": {
+    "blood_pressure": "115/75",
+    "heart_rate": 88,
+    "respiratory_rate": 16,
+    "oxygen_saturation": 98
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

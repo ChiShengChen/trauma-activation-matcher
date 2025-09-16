@@ -1,0 +1,16 @@
+{
+  "transcript": "This is a 25-year-old male patient involved in a motor vehicle accident. Patient was unconscious at the scene. Head injury with possible skull fracture. Chest trauma with rib fractures. Patient is currently intubated and on mechanical ventilation. Blood pressure is stable. Heart rate is elevated at 110. Patient needs immediate trauma activation.",
+  "age": 25,
+  "sex": "M",
+  "mechanism": "Motor vehicle accident",
+  "injuries": "Head injury, chest trauma, rib fractures",
+  "activation_page": "STAT trauma activation for 25-year-old male MVA victim with head injury and chest trauma. Patient unconscious, intubated, stable vitals. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "120/80",
+    "heart_rate": 110,
+    "respiratory_rate": 16,
+    "oxygen_saturation": 98
+  },
+  "consciousness": "Unconscious",
+  "airway": "Intubated"
+}

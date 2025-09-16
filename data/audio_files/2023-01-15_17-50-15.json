@@ -1,0 +1,16 @@
+{
+  "transcript": "28-year-old female with blunt head trauma. Patient was found unconscious at scene. Possible spinal cord injury. Patient is intubated. Blood pressure is stable at 125/85. Heart rate is 105. Need immediate trauma activation for head injury and possible spinal cord injury.",
+  "age": 28,
+  "sex": "F",
+  "mechanism": "Blunt trauma",
+  "injuries": "Head injury, spinal cord injury",
+  "activation_page": "STAT trauma activation for 28-year-old female with blunt head trauma and possible spinal cord injury. Patient unconscious, intubated. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "125/85",
+    "heart_rate": 105,
+    "respiratory_rate": 14,
+    "oxygen_saturation": 97
+  },
+  "consciousness": "Unconscious",
+  "airway": "Intubated"
+}

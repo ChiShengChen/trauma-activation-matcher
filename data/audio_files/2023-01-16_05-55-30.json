@@ -1,0 +1,16 @@
+{
+  "transcript": "29-year-old female with gunshot wound to head. Patient was found unconscious at scene. GSW to temporal region. Patient is intubated and on mechanical ventilation. Blood pressure is 100/60. Heart rate is 110. Need immediate trauma activation for GSW to head.",
+  "age": 29,
+  "sex": "F",
+  "mechanism": "Penetrating injury",
+  "injuries": "Gunshot wound to head",
+  "activation_page": "STAT trauma activation for 29-year-old female with gunshot wound to head. Patient unconscious, intubated. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "100/60",
+    "heart_rate": 110,
+    "respiratory_rate": 14,
+    "oxygen_saturation": 96
+  },
+  "consciousness": "Unconscious",
+  "airway": "Intubated"
+}

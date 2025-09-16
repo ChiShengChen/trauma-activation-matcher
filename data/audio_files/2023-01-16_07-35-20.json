@@ -1,0 +1,16 @@
+{
+  "transcript": "24-year-old female with blunt head and abdominal trauma. Patient was involved in a physical altercation. Head injury with possible concussion. Abdominal trauma with possible internal bleeding. Patient is conscious but in pain. Blood pressure is 105/70. Heart rate is 100. Need trauma activation for blunt head and abdomen trauma.",
+  "age": 24,
+  "sex": "F",
+  "mechanism": "Blunt trauma",
+  "injuries": "Head injury, abdominal trauma",
+  "activation_page": "Trauma activation for 24-year-old female with blunt head and abdominal trauma. Patient conscious, stable vitals. Possible internal bleeding. Trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "105/70",
+    "heart_rate": 100,
+    "respiratory_rate": 18,
+    "oxygen_saturation": 97
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

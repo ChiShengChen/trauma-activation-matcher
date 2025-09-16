@@ -1,0 +1,16 @@
+{
+  "transcript": "31-year-old female industrial accident victim with crush injury and burns. Patient was trapped under machinery. Crush injury to lower extremities with possible compartment syndrome. Burns to upper body. Patient is conscious but in severe pain. Blood pressure is 90/55. Heart rate is 120. Need immediate trauma activation.",
+  "age": 31,
+  "sex": "F",
+  "mechanism": "Industrial accident",
+  "injuries": "Crush injury, burns",
+  "activation_page": "STAT trauma activation for 31-year-old female industrial accident victim with crush injury and burns. Patient conscious, blood pressure dropping. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "90/55",
+    "heart_rate": 120,
+    "respiratory_rate": 20,
+    "oxygen_saturation": 95
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

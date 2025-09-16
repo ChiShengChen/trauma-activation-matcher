@@ -1,0 +1,16 @@
+{
+  "transcript": "38-year-old female with blunt chest trauma. Multiple rib fractures and possible lung injury. Patient is conscious but in severe pain. Blood pressure is 100/65. Heart rate is 110. Need trauma activation for blunt chest trauma.",
+  "age": 38,
+  "sex": "F",
+  "mechanism": "Blunt trauma",
+  "injuries": "Multiple rib fractures, lung injury",
+  "activation_page": "Trauma activation for 38-year-old female with blunt chest trauma. Multiple rib fractures and possible lung injury. Patient conscious, stable vitals. Trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "100/65",
+    "heart_rate": 110,
+    "respiratory_rate": 22,
+    "oxygen_saturation": 94
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

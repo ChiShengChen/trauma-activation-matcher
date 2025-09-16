@@ -1,0 +1,16 @@
+{
+  "transcript": "29-year-old female motor vehicle accident victim with head injury and multiple fractures. Patient was unconscious at scene but now conscious. Multiple fractures including femur, pelvis, and ribs. Blood pressure is 110/70. Heart rate is 100. Need immediate trauma activation.",
+  "age": 29,
+  "sex": "F",
+  "mechanism": "Motor vehicle accident",
+  "injuries": "Head injury, multiple fractures",
+  "activation_page": "STAT trauma activation for 29-year-old female MVA victim with head injury and multiple fractures. Patient conscious, stable vitals. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "110/70",
+    "heart_rate": 100,
+    "respiratory_rate": 18,
+    "oxygen_saturation": 98
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

@@ -1,0 +1,16 @@
+{
+  "transcript": "50-year-old male industrial accident victim with crush injury to lower extremities. Patient is conscious but in severe pain. Both legs are crushed with possible compartment syndrome. Blood pressure is 95/60. Heart rate is 110. Need trauma consult for crush injury.",
+  "age": 50,
+  "sex": "M",
+  "mechanism": "Industrial accident",
+  "injuries": "Crush injury to lower extremities",
+  "activation_page": "Trauma consult for 50-year-old male with crush injury to lower extremities. Patient conscious, stable vitals. Possible compartment syndrome. Trauma team consultation required.",
+  "vitals": {
+    "blood_pressure": "95/60",
+    "heart_rate": 110,
+    "respiratory_rate": 18,
+    "oxygen_saturation": 97
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

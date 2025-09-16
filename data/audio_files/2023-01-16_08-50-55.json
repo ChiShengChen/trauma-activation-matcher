@@ -1,0 +1,16 @@
+{
+  "transcript": "42-year-old male motor vehicle accident victim with multiple trauma and head injury. Patient was unconscious at scene. Multiple trauma including head injury, chest trauma, abdominal trauma, and extremity fractures. Patient is intubated. Blood pressure is 100/65. Heart rate is 115. Need immediate trauma activation for MVA multiple trauma.",
+  "age": 42,
+  "sex": "M",
+  "mechanism": "Motor vehicle accident",
+  "injuries": "Multiple trauma, head injury",
+  "activation_page": "STAT trauma activation for 42-year-old male MVA victim with multiple trauma and head injury. Patient unconscious, intubated. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "100/65",
+    "heart_rate": 115,
+    "respiratory_rate": 16,
+    "oxygen_saturation": 96
+  },
+  "consciousness": "Unconscious",
+  "airway": "Intubated"
+}

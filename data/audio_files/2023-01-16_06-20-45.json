@@ -1,0 +1,16 @@
+{
+  "transcript": "37-year-old male high fall victim with multiple fractures and head injury. Patient fell from approximately 25 feet. Multiple fractures including femur, pelvis, ribs, and spine. Head injury with possible intracranial bleeding. Patient is unconscious and intubated. Blood pressure is 95/60. Heart rate is 120. Need immediate trauma activation for high fall multiple injuries.",
+  "age": 37,
+  "sex": "M",
+  "mechanism": "Fall from height",
+  "injuries": "Multiple fractures, head injury",
+  "activation_page": "STAT trauma activation for 37-year-old male high fall victim with multiple fractures and head injury. Patient unconscious, intubated. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "95/60",
+    "heart_rate": 120,
+    "respiratory_rate": 16,
+    "oxygen_saturation": 95
+  },
+  "consciousness": "Unconscious",
+  "airway": "Intubated"
+}

@@ -1,0 +1,16 @@
+{
+  "transcript": "45-year-old male with gunshot wound to abdomen. Patient is conscious and alert. Entry wound in right lower quadrant. Exit wound in left flank. Patient is hemodynamically stable. Blood pressure 110/70, heart rate 95. Need trauma consult for GSW to abdomen.",
+  "age": 45,
+  "sex": "M",
+  "mechanism": "Penetrating injury",
+  "injuries": "Gunshot wound to abdomen",
+  "activation_page": "Trauma consult for 45-year-old male with gunshot wound to abdomen. Patient conscious, stable vitals. Entry and exit wounds present. Trauma team consultation required.",
+  "vitals": {
+    "blood_pressure": "110/70",
+    "heart_rate": 95,
+    "respiratory_rate": 18,
+    "oxygen_saturation": 99
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

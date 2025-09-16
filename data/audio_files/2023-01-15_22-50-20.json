@@ -1,0 +1,16 @@
+{
+  "transcript": "41-year-old male with stab wound to chest. Patient is conscious and alert. Stab wound in left chest, possible cardiac injury. Patient is hemodynamically stable. Blood pressure 120/80, heart rate 90. Need trauma activation for stab wound to chest.",
+  "age": 41,
+  "sex": "M",
+  "mechanism": "Penetrating injury",
+  "injuries": "Stab wound to chest",
+  "activation_page": "Trauma activation for 41-year-old male with stab wound to chest. Patient conscious, stable vitals. Possible cardiac injury. Trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "120/80",
+    "heart_rate": 90,
+    "respiratory_rate": 16,
+    "oxygen_saturation": 99
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

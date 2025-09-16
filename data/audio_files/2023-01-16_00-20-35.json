@@ -1,0 +1,16 @@
+{
+  "transcript": "27-year-old male motor vehicle accident victim with head injury and internal bleeding. Patient was unconscious at scene. Head injury with possible intracranial bleeding. Blood pressure is 95/60. Heart rate is 125. Need immediate trauma activation for MVA with head injury.",
+  "age": 27,
+  "sex": "M",
+  "mechanism": "Motor vehicle accident",
+  "injuries": "Head injury, internal bleeding",
+  "activation_page": "STAT trauma activation for 27-year-old male MVA victim with head injury and internal bleeding. Patient unconscious, blood pressure dropping. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "95/60",
+    "heart_rate": 125,
+    "respiratory_rate": 20,
+    "oxygen_saturation": 95
+  },
+  "consciousness": "Unconscious",
+  "airway": "Intubated"
+}

@@ -1,0 +1,16 @@
+{
+  "transcript": "35-year-old male involved in motor vehicle accident with burns. Patient has multiple trauma including head injury, chest trauma, and burns to upper body. Patient is conscious but in severe pain. Blood pressure is 100/65. Heart rate is 120. Need immediate trauma activation for MVA with burns.",
+  "age": 35,
+  "sex": "M",
+  "mechanism": "Motor vehicle accident",
+  "injuries": "Multiple trauma, burns, head injury, chest trauma",
+  "activation_page": "STAT trauma activation for 35-year-old male MVA victim with multiple trauma and burns. Patient conscious, stable vitals. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "100/65",
+    "heart_rate": 120,
+    "respiratory_rate": 20,
+    "oxygen_saturation": 96
+  },
+  "consciousness": "Conscious",
+  "airway": "Clear"
+}

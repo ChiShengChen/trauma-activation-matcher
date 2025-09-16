@@ -1,0 +1,16 @@
+{
+  "transcript": "26-year-old male motor vehicle accident victim with head injury and spinal cord injury. Patient was unconscious at scene. Head injury with possible skull fracture. Spinal cord injury at C5-C6 level. Patient is intubated. Blood pressure is 110/70. Heart rate is 105. Need immediate trauma activation for MVA with spinal injury.",
+  "age": 26,
+  "sex": "M",
+  "mechanism": "Motor vehicle accident",
+  "injuries": "Head injury, spinal cord injury",
+  "activation_page": "STAT trauma activation for 26-year-old male MVA victim with head injury and spinal cord injury. Patient unconscious, intubated. Immediate trauma team activation required.",
+  "vitals": {
+    "blood_pressure": "110/70",
+    "heart_rate": 105,
+    "respiratory_rate": 14,
+    "oxygen_saturation": 97
+  },
+  "consciousness": "Unconscious",
+  "airway": "Intubated"
+}
