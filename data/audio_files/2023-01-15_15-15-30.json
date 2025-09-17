@@ -2,15 +2,7 @@
   "transcript": "32-year-old female patient fell from height, approximately 20 feet. Multiple fractures including femur, pelvis, and spine. Internal bleeding suspected. Patient is conscious but in severe pain. Blood pressure is dropping. Heart rate is 130. Need immediate trauma activation for this high fall victim.",
   "age": 32,
   "sex": "F",
-  "mechanism": "Fall from height",
-  "injuries": "Multiple fractures, internal bleeding, spinal injury",
-  "activation_page": "STAT trauma activation for 32-year-old female high fall victim. Multiple fractures including femur, pelvis, spine. Internal bleeding suspected. Blood pressure dropping. Immediate trauma team activation required.",
-  "vitals": {
-    "blood_pressure": "90/60",
-    "heart_rate": 130,
-    "respiratory_rate": 22,
-    "oxygen_saturation": 95
-  },
-  "consciousness": "Conscious",
-  "airway": "Clear"
+  "mechanism": "fall from height",
+  "injuries": "Fracture, Internal Bleeding",
+  "activation_page": "Trauma activation for 32-year-old F with fall from height. Injuries: Fracture, Internal Bleeding. Trauma team activation required."
 }

@@ -35,6 +35,7 @@ import importlib
 # File paths
 XLSX_FOLDER = "data/xlsx_files"
 AUDIO_FOLDER = "data/audio_files"
+TXT_FOLDER = "data/txt_files"  # New folder for .txt files
 OUTPUT_FOLDER = "output"
 
 # Processing parameters
@@ -55,6 +56,7 @@ AGE_MATCH_THRESHOLDS = {'exact': 5, 'partial': 10}
 
 # File extensions
 AUDIO_EXTENSIONS = ['.wav', '.mp3', '.m4a', '.aac', '.flac']
+TXT_EXTENSIONS = ['.txt']
 
 # Timestamp patterns
 TIMESTAMP_PATTERNS = [
@@ -84,6 +86,7 @@ class TraumaDataProcessor:
         """Initialize the processor."""
         self.xlsx_folder = Path(XLSX_FOLDER)
         self.audio_folder = Path(AUDIO_FOLDER)
+        self.txt_folder = Path(TXT_FOLDER)
         self.output_folder = Path(OUTPUT_FOLDER)
         self.output_folder.mkdir(exist_ok=True)
         
@@ -417,6 +420,163 @@ def create_tone_wav(filename, frequency=440, duration=5, sample_rate=44100):
         wav_file.setframerate(sample_rate)
         wav_file.writeframes(wave_data.tobytes())
 
+def preprocess_txt_files():
+    """Preprocess .txt files and convert them to JSON format."""
+    print("Preprocessing .txt files...")
+    
+    txt_folder = Path(TXT_FOLDER)
+    if not txt_folder.exists():
+        print(f"TXT folder {TXT_FOLDER} does not exist. Creating it...")
+        txt_folder.mkdir(parents=True, exist_ok=True)
+        return
+    
+    # Find all .txt files
+    txt_files = []
+    for file_path in txt_folder.rglob("*"):
+        if file_path.suffix.lower() in TXT_EXTENSIONS:
+            txt_files.append(file_path)
+    
+    if not txt_files:
+        print(f"No .txt files found in {TXT_FOLDER}")
+        return
+    
+    print(f"Found {len(txt_files)} .txt files to process")
+    
+    # Process each .txt file
+    for txt_file in txt_files:
+        try:
+            # Extract timestamp from filename
+            timestamp = extract_timestamp_from_filename(txt_file.name)
+            if timestamp is None:
+                print(f"Warning: Could not extract timestamp from {txt_file.name}, skipping...")
+                continue
+            
+            # Read the .txt file content
+            with open(txt_file, 'r', encoding='utf-8') as f:
+                content = f.read().strip()
+            
+            # Parse the content to extract structured data
+            parsed_data = parse_txt_content(content)
+            
+            # Create corresponding JSON file in audio_files folder
+            json_filename = txt_file.stem + '.json'
+            json_file = Path(AUDIO_FOLDER) / json_filename
+            
+            # Ensure audio_files directory exists
+            Path(AUDIO_FOLDER).mkdir(parents=True, exist_ok=True)
+            
+            # Save as JSON
+            with open(json_file, 'w', encoding='utf-8') as f:
+                json.dump(parsed_data, f, indent=2, ensure_ascii=False)
+            
+            print(f"✓ Processed {txt_file.name} -> {json_filename}")
+            
+        except Exception as e:
+            print(f"✗ Error processing {txt_file.name}: {e}")
+    
+    print("TXT preprocessing completed!")
+
+def extract_timestamp_from_filename(filename: str):
+    """Extract datetime from filename (same logic as in the class)."""
+    for pattern in TIMESTAMP_PATTERNS:
+        match = re.search(pattern, filename)
+        if match:
+            timestamp_str = match.group(1)
+            for fmt in TIMESTAMP_FORMATS:
+                try:
+                    return datetime.strptime(timestamp_str, fmt)
+                except ValueError:
+                    continue
+    return None
+
+def parse_txt_content(content: str):
+    """Parse .txt content and extract structured data."""
+    # Initialize default values
+    parsed_data = {
+        'transcript': content,
+        'age': None,
+        'sex': '',
+        'mechanism': '',
+        'injuries': '',
+        'activation_page': ''
+    }
+    
+    # Try to extract structured information using regex patterns
+    content_lower = content.lower()
+    
+    # Extract age (look for patterns like "25-year-old", "age 25", "25 yo", etc.)
+    age_patterns = [
+        r'(\d+)[-\s]year[-\s]old',
+        r'age[:\s]+(\d+)',
+        r'(\d+)\s*yo\b',
+        r'(\d+)\s*years?\s*old'
+    ]
+    
+    for pattern in age_patterns:
+        match = re.search(pattern, content_lower)
+        if match:
+            try:
+                parsed_data['age'] = int(match.group(1))
+                break
+            except ValueError:
+                continue
+    
+    # Extract sex (look for M/F, Male/Female, etc.)
+    sex_patterns = [
+        r'\b(male|m)\b',
+        r'\b(female|f)\b'
+    ]
+    
+    for pattern in sex_patterns:
+        match = re.search(pattern, content_lower)
+        if match:
+            sex_text = match.group(1).lower()
+            if sex_text in ['male', 'm']:
+                parsed_data['sex'] = 'M'
+            elif sex_text in ['female', 'f']:
+                parsed_data['sex'] = 'F'
+            break
+    
+    # Extract mechanism (common trauma mechanisms)
+    mechanism_keywords = {
+        'motor vehicle accident': ['mva', 'motor vehicle', 'car accident', 'vehicle accident', 'crash'],
+        'fall from height': ['fall', 'height', 'high fall', 'fell from'],
+        'penetrating injury': ['gunshot', 'stab', 'penetrating', 'gsw', 'knife'],
+        'blunt trauma': ['blunt', 'hit', 'struck', 'beaten'],
+        'assault': ['assault', 'attack', 'fight', 'beaten'],
+        'industrial accident': ['industrial', 'workplace', 'machinery', 'equipment']
+    }
+    
+    for mechanism, keywords in mechanism_keywords.items():
+        if any(keyword in content_lower for keyword in keywords):
+            parsed_data['mechanism'] = mechanism
+            break
+    
+    # Extract injuries (common injury patterns)
+    injury_keywords = [
+        'head injury', 'chest trauma', 'abdominal trauma', 'spinal injury', 'fracture',
+        'internal bleeding', 'burns', 'laceration', 'contusion', 'concussion',
+        'rib fracture', 'pelvic fracture', 'femur fracture', 'skull fracture'
+    ]
+    
+    found_injuries = []
+    for injury in injury_keywords:
+        if injury in content_lower:
+            found_injuries.append(injury.title())
+    
+    if found_injuries:
+        parsed_data['injuries'] = ', '.join(found_injuries)
+    
+    # Generate activation page based on content
+    if parsed_data['age'] and parsed_data['sex'] and parsed_data['mechanism']:
+        activation_text = f"Trauma activation for {parsed_data['age']}-year-old {parsed_data['sex']} with {parsed_data['mechanism']}"
+        if parsed_data['injuries']:
+            activation_text += f". Injuries: {parsed_data['injuries']}"
+        activation_text += ". Trauma team activation required."
+        parsed_data['activation_page'] = activation_text
+    
+    return parsed_data
+
 def create_sample_data():
     """Create sample data for testing."""
     print("Creating sample data...")
@@ -567,8 +727,17 @@ def main():
         return
     print("✓ All dependencies are installed!")
     
+    # Preprocess .txt files if they exist
+    print("\n2. Checking for .txt files to preprocess...")
+    if Path(TXT_FOLDER).exists() and list(Path(TXT_FOLDER).glob("*.txt")):
+        print("Found .txt files, preprocessing...")
+        preprocess_txt_files()
+        print("✓ TXT preprocessing completed!")
+    else:
+        print("✓ No .txt files found, skipping preprocessing...")
+    
     # Create sample data if needed
-    # print("\n2. Checking for sample data...")
+    # print("\n3. Checking for sample data...")
     # if not Path(XLSX_FOLDER).exists() or not list(Path(XLSX_FOLDER).glob("*.xlsx")):
     #     print("Creating sample data...")
     #     create_sample_data()
@@ -577,7 +746,7 @@ def main():
     #     print("✓ Sample data already exists!")
     
     # Process data
-    print("Processing trauma data...")
+    print("\n3. Processing trauma data...")
     try:
         processor = TraumaDataProcessor()
         processor.run_full_pipeline()
